@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style type="text/css">
+         .main { 
+         width: 50%; /* Ширина */
+         background: #C0C0C0; /* Цвет фона */
+         padding: 25px; /* Поля */
+         margin:0 auto;
+         -moz-box-sizing: border-box; /* Для Firefox */
+         -webkit-box-sizing: border-box; /* Для Safari и Chrome */
+         box-sizing: border-box; /* Для IE и Opera */
+         }
+      </style>
+   </head>
+   <body bgcolor='#8B0000'>
+      <p>
+      <h1 align="center">Оценка открытости информации о деятельности Минфина России</h1>
+      </p>
+      <div class="main">
+         <div align = 'center'>
+            <h3>Кто я?</h3>
+            <p>
+               <label>Отчество: </label>
+               <input type="text"><br>
+            </p>
+            <p>
+               <span>Sex:</span><br>
+               <label> <input type="radio" name='sex'>Да</label>
+               <label> <input type="radio" name='sex'>Нет</label>
+            </p>
+            <p>
+               <label>E-mail:</label>
+               <input type="email" name="email" required>
+            </p>
+            <p>
+               <label for="phone">Городской телефон:</label>
+               <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                  required>
+               <small>Ну типа: 123-456-78-90</small>
+            </p>
+            <hr>
+            <p>
+            <h3>Я откуда?</h3>
+            <label>Кантри:</label>
+            <select>
+               <option>Выбрать</option>
+               <option>Russia</option>
+               <option>Украина</option>
+               <option>Беларус</option>
+			   <option>Средиземье</option>
+            </select>
+            </p>
+			<hr>
+            <p>
+            <h3>Какую возрастную категорию Вы представляете?</h3>
+            <label>Choose:</label>
+            <select>
+               <option>0-18</option>
+               <option>19-30</option>
+               <option>30-45</option>
+               <option>46</option>
+			   <option>47-60</option>
+			   <option>60+</option>
+            </select>
+            </p>
+            <hr>
+            <p>
+            <h3>К какой (каким) из нижеперечисленной(ых) социальных (профессиональных, организационных) групп Вы можете себя отнести?</h3>
+            <label>Органы государственной власти и государственные учреждения<input type="checkbox" id="scales" name="scales"></label><br> 
+            <label>Федеральные органы государственной власти<input type="checkbox" id="scales" name="scales"></label><br> 
+            <label>Органы государственной власти субъектов Российской Федерации и органы местного самоуправления муниципальных образований<input type="checkbox" id="scales" name="scales"></label><br> 
+            <label>Государственные фонды<input type="checkbox" id="scales" name="scales"></label><br>
+			<label>Государственные корпорации<input type="checkbox" id="scales" name="scales"></label><br>
+			<label>Государственные учреждения<input type="checkbox" id="scales" name="scales"></label><br>
+			<label>Бюро кредитных историй<input type="checkbox" id="scales" name="scales"></label><br>
+			<label>Кредитные и некредитные финансовые организации<input type="checkbox" id="scales" name="scales"></label><br>
+			<label>Субъекты страхового дела<input type="checkbox" id="scales" name="scales"></label><br>
+			<label>Организации, осуществляющие операции с драгоценными камнями<input type="checkbox" id="scales" name="scales"></label><br>
+			<label>Организации, осуществляющие операции с драгоценными металлами и (или) сырьевыми товарами, содержащими драгоценные металлы<input type="checkbox" id="scales" name="scales"></label><br>
+			<label>Организации, деятельность которых реализуется в сфере производства и оборота этилового спирта, алкогольной и спиртосодержащей продукции<input type="checkbox" id="scales" name="scales"></label><br>
+			<label>Брокеры<input type="checkbox" id="scales" name="scales"></label><br>
+			<label>Негосударственные пенсионные фонды<input type="checkbox" id="scales" name="scales"></label><br>
+			<label>Ассоциации и союзы<input type="checkbox" id="scales" name="scales"></label><br>
+			<label>Кредитные кооперативы<input type="checkbox" id="scales" name="scales"></label><br>
+			<label>Таможенные брокеры, перевозчики и владельцы таможенных складов<input type="checkbox" id="scales" name="scales"></label><br>
+			<label>Индивидуальные предприниматели<input type="checkbox" id="scales" name="scales"></label><br>
+			<label>Индивидуальные аудиторы<input type="checkbox" id="scales" name="scales"></label><br>
+			<label>Физические лица<input type="checkbox" id="scales" name="scales"></label><br>
+			<label>Юридические лица (кроме категорий, указанных выше)<input type="checkbox" id="scales" name="scales"></label><br>
+			<label>Иное (укажите)<input type="checkbox" id="scales" name="scales"></label><br>
+               <textarea rows="2" cols="25">
+  				</textarea>
+			
+			
+            </p>
+            <p>
+               <label>Считаете ли Вы информацию, созданную Минфином России и размещённую в виде презентаций и видеороликов на официальном сайте и в социальных сетях, понятной для восприятия?</label>
+               <select>
+                  <option>Choose your destiny</option>
+                  <option>Да</option>
+                  <option>Больше да, чем нет</option>
+                  <option>Скорее нет, чем да</option>
+                  <option>Нет</option>
+                  <option>Я не знаю о том, что Минфин России выпускает презентации и видеоролики с информацией</option>
+                  <option>Я не знаю</option>
+               </select>
+            </p>
+            <hr>
+            <p>
+               <label>Что-то еще? </label>
+               <br>
+               <textarea rows="4" cols="50">
+  				</textarea>
+            </p>
+            <button>Send</button> 
+         </div>
+      </div>
+   </body>
+</html>
