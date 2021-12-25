@@ -1,0 +1,82 @@
+<!Doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Виселица</title>
+</head>
+<body>
+<h1>Виселица</h1>
+
+<script>
+
+    var user=["1", "2"];
+    var randomUser = user[Math.floor(Math.random() * user.length)];
+    var words=prompt("Пользователь " + randomUser + ", загадайте слово").toLowerCase();
+    var alphabet=["а","б","в","г","д","е","ж","з","и","й","к","л","м","н","о","п","р","с","т","у","ф","х","ц","ч","ш","щ","ъ","ы","ь","э","ю","я"];
+    var resultAnswer=[];
+    var noRightLetter=[];
+    var countForNoRightLetter = 0;
+    var countTry = 6;
+    var guessLetterCount = words.length;
+
+    for(var k=0; k < words.length;  k++){
+        resultAnswer[k]= " - ";
+    };
+
+    var check;
+    function addLetter(letter){
+        for (var j=0; j < noRightLetter.length; j++){
+            if(letter === noRightLetter[j]){
+                countTry--;
+                return alert("Такая буква была");
+            };
+        };
+        check = false;
+        for(var i=0; i < words.length; i++) {
+            if (letter === words[i]){
+                resultAnswer[i]=letter;
+                guessLetterCount--;
+                noRightLetter[countForNoRightLetter]=letter;
+                countForNoRightLetter++;
+                check = true;
+            };
+        };
+    };
+    function minusTry(check){
+        if(check === true){
+            return;
+        }else{
+            countTry--;
+            noRightLetter[countForNoRightLetter]=letter;
+            countForNoRightLetter++;
+        };
+    };
+
+
+    function alertMessage(){
+        alert("Ваше слово: " + resultAnswer.join(""));
+        alert("Загаданное слово: " + words);
+    };
+
+
+
+    //игровой цикл
+    while (guessLetterCount > 0 && countTry > 0) {
+        alert("Осталось попыток: " + countTry + "  " + resultAnswer.join("") + " " + alphabet);
+        var letter = prompt("Введите одну букву"," ").toLowerCase();
+        if (letter === null){
+            break;
+        }if (letter.length != 1){
+            alert("Одну букву");
+            countTry--;
+        } else {
+            addLetter(letter);
+            minusTry(check);
+        };
+    };
+
+    alertMessage();
+</script>
+<button id="restartGame" onClick="window.location.reload()">Играть снова</button>
+</body>
+</html>
